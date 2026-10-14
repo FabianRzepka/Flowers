@@ -129,7 +129,7 @@ h1 em, h2 em { font-size: 1.08em; }
   border: 1px solid rgba(43, 32, 38, 0.08);
   font-size: 13px; font-weight: 500; letter-spacing: 0.02em; color: var(--muted);
 }
-.tag img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
+.tag img { width: 30px; height: 30px; object-fit: contain; }
 .hero h1 { margin-top: 28px; font-size: clamp(3.25rem, 1.6rem + 5.6vw, 7rem); }
 .hero h1 em { display: block; }
 .hero-lead { margin-top: 28px; max-width: 46ch; color: var(--muted); font-size: 18px; }
@@ -139,11 +139,12 @@ h1 em, h2 em { font-size: 1.08em; }
 
 .hero-stage { position: relative; z-index: 1; aspect-ratio: 1 / 1; width: 100%; max-width: 640px; justify-self: center; }
 .hero-plinth { position: absolute; inset: 8% 6% 4%; border-radius: 50%; background: var(--blush); }
-.hero-box { position: absolute; left: 50%; bottom: 2%; width: 96%; transform: translateX(-50%); filter: drop-shadow(0 30px 40px rgba(43, 32, 38, 0.18)); }
+.hero-box { position: absolute; left: 50%; bottom: 2%; width: 88%; transform: translateX(-50%); filter: drop-shadow(0 30px 40px rgba(43, 32, 38, 0.18)); }
 .float { position: absolute; filter: drop-shadow(0 14px 18px rgba(43, 32, 38, 0.18)); }
-.f-1 { width: 15%; left: -2%; top: 18%; }
-.f-2 { width: 15%; right: -1%; top: 0; transform: rotate(14deg); }
-.f-3 { width: 14%; right: 4%; bottom: 10%; transform: rotate(-12deg); }
+.f-1 { width: 14%; left: 0; top: 6%; transform: rotate(-18deg); }
+.f-2 { width: 7%; right: -3%; top: 34%; transform: rotate(26deg); }
+.f-3 { width: 17%; right: 0; bottom: 6%; transform: rotate(-24deg); }
+.f-4 { width: 15%; left: -2%; bottom: 8%; transform: rotate(-70deg); }
 
 /* ---------- Nagłówki sekcji ---------- */
 .section-head {
@@ -155,7 +156,7 @@ h1 em, h2 em { font-size: 1.08em; }
 
 /* ---------- Kolekcja ---------- */
 .collection { position: relative; padding: var(--section) var(--margin); max-width: calc(var(--max) + 2 * var(--margin)); margin: 0 auto; }
-.deco-col-tr { top: -80px; right: calc(50% - 50vw); width: clamp(180px, 24vw, 400px); }
+.deco-col-tr { top: -150px; right: calc(50% - 50vw); width: clamp(110px, 12vw, 210px); }
 .cards { margin-top: 72px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(16px, 2vw, 28px); row-gap: 56px; position: relative; z-index: 1; }
 .card-mid { margin-top: 36px; }
 .card-low { margin-top: 72px; }
@@ -277,8 +278,8 @@ h1 em, h2 em { font-size: 1.08em; }
 }
 .cta-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transform: scale(1.06); }
 .cta-card::before { content: ""; position: absolute; inset: 0; background: rgba(28, 19, 24, 0.38); z-index: -1; }
-.deco-cta-l { left: -30px; bottom: -40px; width: clamp(140px, 18vw, 260px); z-index: 0; transform: rotate(-20deg); }
-.deco-cta-r { right: 4%; top: 8%; width: clamp(80px, 9vw, 140px); z-index: 0; transform: rotate(12deg); }
+.deco-cta-l { left: 0; bottom: 0; width: clamp(150px, 22vw, 320px); z-index: 0; }
+.deco-cta-r { right: 0; top: 0; width: clamp(120px, 17vw, 250px); z-index: 0; }
 .cta-inner { position: relative; z-index: 1; max-width: 680px; }
 .cta h2 { font-size: clamp(2.6rem, 1.4rem + 4.4vw, 5.25rem); }
 .cta h2 em { color: var(--rose); }
@@ -319,6 +320,7 @@ h1 em, h2 em { font-size: 1.08em; }
   .float { animation: bob 7s ease-in-out infinite; }
   .f-2 { animation-delay: -2.4s; }
   .f-3 { animation-delay: -4.6s; }
+  .f-4 { animation-delay: -1.2s; animation-duration: 9s; }
   .hero-box { animation: sway 9s ease-in-out infinite; transform-origin: 50% 100%; }
 }
 @keyframes rise { to { opacity: 1; transform: none; } }
@@ -359,7 +361,7 @@ h1 em, h2 em { font-size: 1.08em; }
   .hero-facts strong { font-size: 24px; }
 
   .collection, .gallery, .about { padding-left: 20px; padding-right: 20px; }
-  .deco-col-tr { width: 140px; top: -40px; }
+  .deco-col-tr { width: 80px; top: -60px; }
   .cards { grid-template-columns: 1fr; row-gap: 40px; margin-top: 48px; }
   .cards .card:nth-child(even) { margin-top: 0; }
   .card-badge { opacity: 1; transform: none; }
@@ -388,7 +390,8 @@ h1 em, h2 em { font-size: 1.08em; }
 
   .cta { padding: 0 12px 88px; }
   .cta-card { padding: 72px 20px; }
-  .deco-cta-r { top: 18px; right: 12px; }
+  .deco-cta-l { width: 130px; }
+  .deco-cta-r { width: 110px; }
 
   .footer { padding: 72px 20px 28px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }

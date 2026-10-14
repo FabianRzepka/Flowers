@@ -26,8 +26,8 @@ Jeśli konkretny box ma prowadzić do swojego ogłoszenia, dodaj w `index.html` 
 - `main.js` — link do OLX, menu, paralaksa dekoracji, animacje wejścia
 - `assets/logo.svg` — logo (box z kwiatem), też jako favicon
 - `assets/img/` — zdjęcia boxów (kadry ze zdjęć Emilii)
-- `assets/deco/` — kwiaty wycięte z tła ze zdjęć Emilii (hero, narożniki, kwiatki przy nagłówkach)
-  i wygenerowane z nich tło bokeh (`bg-cta.webp`)
+- `assets/deco/` — dekoracje ze zdjęć Emilii: box i bukiety wycięte z tła, narożniki z prawdziwego bukietu,
+  pojedyncze kwiaty wycięte po konturze płatków (`one-*.webp`) i wygenerowane z kwiatów tło bokeh (`bg-cta.webp`)
 
 ## Do uzupełnienia przed publikacją
 
