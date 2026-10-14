@@ -3,295 +3,301 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Emilia — kwiatowe boxy, które nie więdną</title>
-  <meta name="description" content="Ręcznie układane boxy ze sztucznych kwiatów w welurowych pudełkach. Każdy jedyny, od 129 zł, z wysyłką w całej Polsce.">
-  <meta property="og:title" content="Emilia — kwiatowe boxy, które nie więdną">
-  <meta property="og:description" content="Ręcznie układane boxy ze sztucznych kwiatów. Każdy jedyny, od 129 zł.">
+  <title>Kwiatboxy — kwiaty, które nie więdną</title>
+  <meta name="description" content="Dekoracyjne boxy ze sztucznych kwiatów, ręcznie układane przez Emilię. Każdy jedyny w swoim rodzaju. Do kupienia na OLX.">
+  <meta property="og:title" content="Kwiatboxy — kwiaty, które nie więdną">
+  <meta property="og:description" content="Ręcznie układane boxy ze sztucznych kwiatów. Każdy jedyny w swoim rodzaju.">
   <meta property="og:image" content="assets/img/komplet-pieciu.jpg">
   <meta name="theme-color" content="#f7f2eb">
   <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/deco/hero-box.webp">
 </head>
 <body>
-  <a class="skip" href="#kolekcja">Przejdź do kolekcji</a>
+  <a class="skip" href="#boxy">Przejdź do boxów</a>
 
-  <!-- HERO: jeden okaz na kolorowym passe-partout, lista nazw obok -->
-  <header class="hero" id="top">
-    <div class="hero-brand" data-rise style="--i:0">
-      <h1 class="wordmark">Emilia</h1>
-      <p class="hero-lead">Kwiatowe boxy, które nie więdną</p>
+  <!-- Pływające menu -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Kwiatboxy — strona główna">
+        <img class="brand-mark" src="assets/logo.svg" width="40" height="40" alt="">
+        <span class="brand-word">Kwiatboxy<span class="dot">.</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Główna nawigacja">
+        <a href="#boxy">Boxy</a>
+        <a href="#jak-powstaja">Jak powstają</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#o-mnie">O mnie</a>
+      </nav>
+      <a class="pill pill-dark nav-cta" href="https://www.olx.pl/" data-olx target="_blank" rel="noopener">Kup na OLX <span aria-hidden="true">↗</span></a>
     </div>
-
-    <p class="hero-desc" data-rise style="--i:1">
-      Układam je ręcznie, gałązka po gałązce, w welurowych pudełkach.
-      Każdy jest jedyny. Od 129&nbsp;zł, z&nbsp;wysyłką w całej Polsce.
-    </p>
-
-    <ul class="specimen-names" role="list" aria-label="Wybierz box" data-rise style="--i:2">
-      <li><button type="button" data-box="0" aria-pressed="true">Len i koronka</button></li>
-      <li><button type="button" data-box="1" aria-pressed="false">Pudrowy róż</button></li>
-      <li><button type="button" data-box="2" aria-pressed="false">Wrzos</button></li>
-      <li><button type="button" data-box="3" aria-pressed="false">Brzoskwinia</button></li>
-      <li><button type="button" data-box="4" aria-pressed="false">Oliwka</button></li>
-    </ul>
-
-    <figure class="specimen" data-tint="jute" data-rise style="--i:1">
-      <div class="specimen-frame">
-        <img class="specimen-img is-on" src="assets/img/box-len-i-koronka.jpg" width="1000" height="1250"
-             alt="Box „Len i koronka”: kremowe welurowe pudełko z jutową kokardą, różowe róże i fioletowe chryzantemy" fetchpriority="high">
-        <img class="specimen-img" src="assets/img/box-len-i-koronka.jpg" width="1000" height="1250" alt="" aria-hidden="true">
-      </div>
-    </figure>
-
-    <div class="specimen-foot" data-rise style="--i:3">
-      <p class="specimen-fact" aria-live="polite">Kremowy welur, juta z koronką, róże i chryzantemy · Ø 18 cm</p>
-      <a class="button" href="#zamow" data-order-current>Zamów ten box</a>
-    </div>
-
-    <nav class="hero-links" aria-label="Główna nawigacja" data-rise style="--i:4">
-      <a href="#kolekcja">Kolekcja</a>
-      <a href="#cennik">Cennik</a>
-      <a href="#pytania">Pytania</a>
-    </nav>
   </header>
 
   <main>
-    <!-- INTRO: zdanie z miniaturami w linii -->
-    <section class="intro" aria-label="Co jest w boxie">
-      <p class="statement" data-reveal>
-        Róże&nbsp;<span class="thumb"><img src="assets/img/d-roza.jpg" alt="" width="320" height="320" loading="lazy"></span>,
-        chryzantemy&nbsp;<span class="thumb"><img src="assets/img/d-chryzantema.jpg" alt="" width="320" height="320" loading="lazy"></span>,
-        kłosy lawendy&nbsp;<span class="thumb hide-sm"><img src="assets/img/d-lawenda.jpg" alt="" width="320" height="320" loading="lazy"></span>
-        i jutowa kokarda&nbsp;<span class="thumb thumb-wide"><img src="assets/img/d-kokarda.jpg" alt="" width="320" height="320" loading="lazy"></span>
-        w welurowym pudełku, które postoi na komodzie latami.
-      </p>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <img class="deco deco-hero-tr" src="assets/deco/corner-tr.webp" width="700" height="654" alt="" aria-hidden="true" data-parallax="0.12">
+
+      <div class="hero-copy">
+        <p class="tag" data-rise style="--i:0"><img src="assets/deco/f-rose.webp" width="235" height="220" alt="">Ręcznie układane przez Emilię</p>
+        <h1 data-rise style="--i:1">Kwiaty, które <em>nie&nbsp;więdną.</em></h1>
+        <p class="hero-lead" data-rise style="--i:2">
+          Dekoracyjne boxy ze sztucznych kwiatów w welurowych pudełkach. Każdy układam ręcznie
+          i każdy jest jedyny. Postoi na komodzie latami, bez wody i bez podlewania.
+        </p>
+        <div class="hero-actions" data-rise style="--i:3">
+          <a class="pill pill-dark" href="#boxy">Zobacz boxy</a>
+          <a class="link-arrow" href="https://www.olx.pl/" data-olx target="_blank" rel="noopener">Kup na OLX <span aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="hero-facts" data-rise style="--i:4">
+          <li><strong>100%</strong> ręcznie</li>
+          <li><strong>0</strong> podlewania</li>
+          <li><strong>1</strong> egzemplarz każdego</li>
+        </ul>
+      </div>
+
+      <div class="hero-stage" data-rise style="--i:2">
+        <div class="hero-plinth" aria-hidden="true"></div>
+        <img class="hero-box" src="assets/deco/hero-box.webp" width="1200" height="1170"
+             alt="Box z różowymi różami, chryzantemami i lawendą w kremowym welurowym pudełku z jutową kokardą" fetchpriority="high">
+        <img class="float f-1" src="assets/deco/f-pompon.webp" width="145" height="145" alt="" aria-hidden="true">
+        <img class="float f-2" src="assets/deco/f-lavender.webp" width="210" height="360" alt="" aria-hidden="true">
+        <img class="float f-3" src="assets/deco/f-dahlia.webp" width="158" height="207" alt="" aria-hidden="true">
+      </div>
     </section>
 
-    <!-- PORTFOLIO: przesunięte kafle, puste komórki -->
-    <section class="work" id="kolekcja" aria-labelledby="work-h">
-      <div class="work-grid">
-        <figure class="tile t-wide c1" data-reveal>
-          <div class="tile-media drift"><img src="assets/img/komplet-pieciu.jpg" width="1920" height="1080" loading="lazy"
-               alt="Pięć kwiatowych boxów w kremowych i różowych pudełkach ustawionych w rzędzie na białej komodzie"></div>
-          <figcaption><span>Pięć boxów na jedno przyjęcie</span><span>komplet · 2026</span></figcaption>
-        </figure>
-        <h2 class="work-h c3" id="work-h" data-reveal><span>Ostatnie</span> <span>boxy</span></h2>
-        <figure class="tile c4" data-reveal>
-          <div class="tile-media"><img src="assets/img/len-na-komodzie.jpg" width="1000" height="1250" loading="lazy"
-               alt="Box z jutową kokardą z boku, na białej półce"></div>
-          <figcaption><span>Len i koronka</span><span>z profilu</span></figcaption>
-        </figure>
+    <!-- KOLEKCJA -->
+    <section class="collection" id="boxy" aria-labelledby="boxy-h">
+      <img class="deco deco-col-tr" src="assets/deco/corner-tr.webp" width="700" height="654" alt="" aria-hidden="true" data-parallax="0.08">
+      <div class="section-head" data-reveal>
+        <div>
+          <h2 id="boxy-h">Moje <em>boxy.</em> <img class="h-flower" src="assets/deco/f-rose.webp" width="235" height="220" alt=""></h2>
+          <p>Każdy box to jedna, niepowtarzalna kompozycja. Kiedy się sprzeda, następny będzie już trochę inny.</p>
+        </div>
+        <a class="link-arrow caps" href="https://www.olx.pl/" data-olx target="_blank" rel="noopener">Wszystkie na OLX <span aria-hidden="true">↗</span></a>
+      </div>
 
-        <figure class="tile c2" data-reveal>
-          <div class="tile-media mat" data-tint="blush"><img src="assets/img/box-pudrowy-roz.jpg" width="1000" height="1250" loading="lazy"
-               alt="Box w różowym welurowym pudełku z liliami, różami i chryzantemami"></div>
-          <figcaption><span>Pudrowy róż</span><span>różowy welur</span></figcaption>
-        </figure>
-        <figure class="tile c3" data-reveal>
-          <div class="tile-media"><img src="assets/img/len-trzy-czwarte.jpg" width="1000" height="1250" loading="lazy"
-               alt="Box „Len i koronka” na dębowym blacie, widok z ukosa"></div>
-          <figcaption><span>Len i koronka</span><span>na dębowym blacie</span></figcaption>
-        </figure>
+      <div class="cards">
+        <article class="card" data-reveal>
+          <a class="card-media" href="https://www.olx.pl/" data-olx target="_blank" rel="noopener" data-tint="jute">
+            <img src="assets/img/box-len-i-koronka.jpg" width="1000" height="1250" loading="lazy" alt="Box „Len i koronka” z różowymi różami i jutową kokardą">
+            <span class="card-badge">Zobacz na OLX ↗</span>
+          </a>
+          <div class="card-meta"><h3>Len i koronka</h3><span>kremowy welur</span></div>
+          <p>Róże, chryzantemy i lawenda, kokarda z juty i koronki.</p>
+        </article>
+        <article class="card card-low" data-reveal>
+          <a class="card-media" href="https://www.olx.pl/" data-olx target="_blank" rel="noopener" data-tint="blush">
+            <img src="assets/img/box-pudrowy-roz.jpg" width="1000" height="1250" loading="lazy" alt="Box „Pudrowy róż” w różowym welurowym pudełku">
+            <span class="card-badge">Zobacz na OLX ↗</span>
+          </a>
+          <div class="card-meta"><h3>Pudrowy róż</h3><span>różowy welur</span></div>
+          <p>Lilie, róże i brzoskwiniowe chryzantemy w różowym pudełku.</p>
+        </article>
+        <article class="card card-mid" data-reveal>
+          <a class="card-media" href="https://www.olx.pl/" data-olx target="_blank" rel="noopener" data-tint="heather">
+            <img src="assets/img/box-wrzos.jpg" width="1000" height="1250" loading="lazy" alt="Box „Wrzos” z ranunkulusami i wrzosowymi liśćmi">
+            <span class="card-badge">Zobacz na OLX ↗</span>
+          </a>
+          <div class="card-meta"><h3>Wrzos</h3><span>kremowy welur</span></div>
+          <p>Ranunkulusy, wrzosowe liście i drobne kwiaty w pąkach.</p>
+        </article>
+        <article class="card" data-reveal>
+          <a class="card-media" href="https://www.olx.pl/" data-olx target="_blank" rel="noopener" data-tint="blush">
+            <img src="assets/img/box-brzoskwinia.jpg" width="1000" height="1250" loading="lazy" alt="Box „Brzoskwinia” z różami i pomponami">
+            <span class="card-badge">Zobacz na OLX ↗</span>
+          </a>
+          <div class="card-meta"><h3>Brzoskwinia</h3><span>kremowy welur</span></div>
+          <p>Róże, brzoskwiniowe pompony i jagody eukaliptusa.</p>
+        </article>
+        <article class="card card-low" data-reveal>
+          <a class="card-media" href="https://www.olx.pl/" data-olx target="_blank" rel="noopener" data-tint="sage">
+            <img src="assets/img/box-oliwka.jpg" width="1000" height="1250" loading="lazy" alt="Box „Oliwka” z liśćmi oliwki i jutową kokardą">
+            <span class="card-badge">Zobacz na OLX ↗</span>
+          </a>
+          <div class="card-meta"><h3>Oliwka</h3><span>juta z koronką</span></div>
+          <p>Liście oliwki, fioletowy sukulent i różowe gipsówki.</p>
+        </article>
+        <article class="card card-mid card-custom" data-reveal>
+          <div class="custom-inner">
+            <img class="custom-img" src="assets/deco/bouquet-side.webp" width="999" height="1000" loading="lazy" alt="">
+            <h3>Box w <em>Twoich</em> kolorach</h3>
+            <p>Masz wnętrze, suknię druhny albo ulubiony kwiat mamy? Napisz do mnie na OLX, ułożę box pod Ciebie.</p>
+            <a class="pill pill-light" href="https://www.olx.pl/" data-olx target="_blank" rel="noopener">Napisz na OLX <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <figure class="tile c1" data-reveal>
-          <div class="tile-media mat" data-tint="sage"><img src="assets/img/box-oliwka.jpg" width="1000" height="1250" loading="lazy"
-               alt="Box z liśćmi oliwki, fioletowym sukulentem i jutową kokardą z koronką"></div>
-          <figcaption><span>Oliwka</span><span>juta z koronką</span></figcaption>
-        </figure>
-        <figure class="tile t-wide c3" data-reveal>
-          <div class="tile-media"><img src="assets/img/len-na-polce.jpg" width="1600" height="1066" loading="lazy"
-               alt="Box z różami i chryzantemami między dwoma innymi boxami na półce"></div>
-          <figcaption><span>Trzy boxy na półce</span><span>kremowy welur</span></figcaption>
-        </figure>
+    <!-- JAK POWSTAJĄ -->
+    <section class="process" id="jak-powstaja" aria-labelledby="proc-h">
+      <img class="deco deco-proc-tl" src="assets/deco/corner-tl.webp" width="700" height="654" alt="" aria-hidden="true" data-parallax="0.1">
+      <div class="process-copy" data-reveal>
+        <h2 id="proc-h">Jak powstaje <em>box.</em></h2>
+        <p>Bez szablonu i bez pośpiechu. Każdy box przechodzi przez moje ręce od pierwszej róży do ostatniej pętelki na kokardzie.</p>
+        <div class="process-photo">
+          <img src="assets/img/etap-kolory.jpg" width="900" height="1125" loading="lazy" alt="Zbliżenie na róże, brzoskwiniowe pompony i fioletowe liście">
+        </div>
+      </div>
+      <ol class="steps">
+        <li data-reveal>
+          <span class="step-n" aria-hidden="true">01</span>
+          <div><h3>Dobór kolorów</h3><p>Zaczynam od jednej róży i dobieram do niej resztę, aż dwa, trzy odcienie zaczną ze sobą rozmawiać.</p></div>
+        </li>
+        <li data-reveal>
+          <span class="step-n" aria-hidden="true">02</span>
+          <div><h3>Kompozycja</h3><p>Kwiaty trafiają do gąbki florystycznej, od najwyższej gałązki lawendy do najniższej róży.</p></div>
+        </li>
+        <li data-reveal>
+          <span class="step-n" aria-hidden="true">03</span>
+          <div><h3>Kokarda i pudełko</h3><p>Welurowe pudełko z uchwytem ze wstążki i kokarda z juty z koronką albo z satyny.</p></div>
+        </li>
+        <li data-reveal>
+          <span class="step-n" aria-hidden="true">04</span>
+          <div><h3>Prosto na OLX</h3><p>Gotowy box fotografuję i wystawiam na OLX. Tam go kupisz i wybierzesz wysyłkę albo odbiór.</p></div>
+        </li>
+      </ol>
+    </section>
 
-        <figure class="tile c2" data-reveal>
-          <div class="tile-media mat" data-tint="heather"><img src="assets/img/box-wrzos.jpg" width="1000" height="1250" loading="lazy"
-               alt="Box z ranunkulusami i wrzosowymi liśćmi w kremowym pudełku"></div>
-          <figcaption><span>Wrzos</span><span>kremowy welur</span></figcaption>
+    <!-- GALERIA -->
+    <section class="gallery" id="galeria" aria-labelledby="gal-h">
+      <div class="section-head" data-reveal>
+        <div>
+          <h2 id="gal-h">Galeria<em>.</em> <img class="h-flower" src="assets/deco/f-pompon.webp" width="145" height="145" alt=""></h2>
+          <p>Boxy u mnie w domu, zanim pojechały do nowych właścicieli.</p>
+        </div>
+      </div>
+      <div class="bento">
+        <figure class="b b-wide" data-reveal>
+          <img class="drift" src="assets/img/komplet-pieciu.jpg" width="1920" height="1080" loading="lazy" alt="Pięć kwiatowych boxów w rzędzie na białej komodzie">
+          <figcaption>Pięć boxów na jedno przyjęcie</figcaption>
         </figure>
-        <figure class="tile c4" data-reveal>
-          <div class="tile-media mat" data-tint="blush"><img src="assets/img/box-brzoskwinia.jpg" width="1000" height="1250" loading="lazy"
-               alt="Box z różami, brzoskwiniowymi pomponami i jagodami eukaliptusa"></div>
-          <figcaption><span>Brzoskwinia</span><span>kremowy welur</span></figcaption>
+        <figure class="b b-tall" data-reveal>
+          <img src="assets/img/len-na-komodzie.jpg" width="1000" height="1250" loading="lazy" alt="Box z jutową kokardą na białej komodzie, widok z boku">
+          <figcaption>Na komodzie</figcaption>
+        </figure>
+        <figure class="b" data-reveal>
+          <img src="assets/img/len-z-gory.jpg" width="1600" height="1066" loading="lazy" alt="Kompozycja widziana z góry">
+          <figcaption>Z góry</figcaption>
+        </figure>
+        <figure class="b" data-reveal>
+          <img src="assets/img/len-trzy-czwarte.jpg" width="1000" height="1250" loading="lazy" alt="Box na dębowym blacie">
+          <figcaption>Na dębowym blacie</figcaption>
+        </figure>
+        <figure class="b" data-reveal>
+          <img src="assets/img/len-na-polce.jpg" width="1600" height="1066" loading="lazy" alt="Trzy boxy obok siebie na półce">
+          <figcaption>Trzy obok siebie</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- O EMILII: list -->
-    <section class="letter" id="o-mnie" aria-label="List od Emilii">
-      <div class="letter-col" data-reveal>
-        <img class="letter-portrait" src="assets/img/d-roza.jpg" width="320" height="320" alt="" loading="lazy">
-        <p>Cześć, jestem Emilia.</p>
-        <p>Boxy zaczęłam układać dla siebie. Chciałam mieć na komodzie kwiaty, które w poniedziałek wyglądają tak samo
-          jak w piątek. Potem poprosiła o nie siostra, a potem jej koleżanki z pracy.</p>
-        <p>Każdy box składam ręcznie. Nie mam szablonu: zaczynam od jednej róży i dobieram do niej resztę, aż kolory
-          zaczną ze sobą rozmawiać. Dlatego <mark>dwa boxy nigdy nie są identyczne</mark>, nawet gdy zamawiasz pięć na jedno przyjęcie.</p>
-        <p>Używam dobrych sztucznych kwiatów: z bliska wyglądają jak żywe, nie blakną na słońcu i nie gubią płatków.
-          Box nie potrzebuje wody, wystarczy raz na jakiś czas zdmuchnąć z niego kurz.</p>
-        <p>Jeśli masz w głowie konkretne kolory, na przykład wnętrze, suknię druhny albo ulubiony kwiat mamy, napisz. Ułożę box pod Ciebie.</p>
+    <!-- HASŁO -->
+    <section class="statement" aria-label="Każdy box jest inny">
+      <img class="statement-bg" src="assets/deco/bouquet-top.webp" width="1100" height="992" alt="" aria-hidden="true" data-parallax="0.06">
+      <div class="statement-inner" data-reveal>
+        <img class="statement-mark" src="assets/logo.svg" width="56" height="56" alt="">
+        <h2>Nigdy dwa <em>takie same.</em></h2>
+        <p>Nie mam szablonu. Każdy box układam od nowa, więc ten, który kupisz, istnieje tylko w jednym egzemplarzu.</p>
+      </div>
+    </section>
+
+    <!-- O MNIE -->
+    <section class="about" id="o-mnie" aria-labelledby="about-h">
+      <div class="about-art" data-reveal>
+        <div class="about-plinth" aria-hidden="true"></div>
+        <img src="assets/deco/bouquet-side.webp" width="999" height="1000" loading="lazy" alt="Bukiet z różami, chryzantemami i lawendą">
+      </div>
+      <div class="about-copy" data-reveal>
+        <h2 id="about-h">Cześć, jestem <em>Emilia.</em></h2>
+        <p>Boxy zaczęłam układać dla siebie. Chciałam mieć na komodzie kwiaty, które w poniedziałek wyglądają tak samo jak w piątek. Potem poprosiła o nie siostra, a potem jej koleżanki z pracy.</p>
+        <p>Używam dobrych sztucznych kwiatów: z bliska wyglądają jak żywe, nie blakną na słońcu i nie gubią płatków. Box nie potrzebuje wody, wystarczy raz na jakiś czas zdmuchnąć z niego kurz.</p>
+        <p>Jeśli masz w głowie konkretne kolory, napisz do mnie na OLX. Ułożę box pod Ciebie.</p>
         <p class="sign">Emilia</p>
-        <p class="sign-role">układa każdy box sama</p>
       </div>
     </section>
 
-    <!-- JAK POWSTAJE: kafle, które rosną -->
-    <section class="grow" id="jak-powstaje" aria-labelledby="grow-h">
-      <h2 class="grow-h" id="grow-h" data-reveal>Jak powstaje box</h2>
-      <div class="grow-row">
-        <div class="grow-step s1" data-reveal>
-          <div class="grow-tile" data-tint="blush"><img src="assets/img/etap-kolory.jpg" width="900" height="1125" loading="lazy"
-               alt="Zbliżenie na róże, brzoskwiniowe pompony i fioletowe liście"></div>
-          <h3>Najpierw kolory</h3>
-          <p>Mówisz, do jakiego wnętrza albo na jaką okazję. Wybieramy dwa, trzy odcienie przewodnie.</p>
-        </div>
-        <div class="grow-step s2" data-reveal>
-          <div class="grow-tile" data-tint="sage"><img src="assets/img/len-z-gory.jpg" width="1600" height="1066" loading="lazy"
-               alt="Kompozycja widziana z góry: róże, chryzantemy, lawenda i eukaliptus"></div>
-          <h3>Potem kompozycja</h3>
-          <p>Kwiaty trafiają do gąbki florystycznej, od najwyższej gałązki do najniższej róży.</p>
-        </div>
-        <div class="grow-step s3" data-reveal>
-          <div class="grow-tile" data-tint="jute"><img src="assets/img/box-len-i-koronka.jpg" width="1000" height="1250" loading="lazy"
-               alt="Gotowy box z jutową kokardą i kremową wstążką"></div>
-          <h3>Na końcu kokarda</h3>
-          <p>Juta z koronką albo satyna. Gotowy box wysyłam w ciągu 5–7 dni roboczych.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CENNIK: paragon -->
-    <section class="pricing" id="cennik" aria-labelledby="price-h">
-      <div class="pricing-copy" data-reveal>
-        <h2 id="price-h">Ile kosztuje box</h2>
-        <p>Cena zależy od wielkości pudełka i dodatków. Wybierz poniżej, a paragon obok policzy się sam.</p>
-
-        <form class="options" id="options" onsubmit="return false">
-          <fieldset>
-            <legend>Wielkość</legend>
-            <label><input type="radio" name="size" value="S" data-price="129" data-label="Mały, Ø 14 cm"> Mały, Ø 14 cm <span>129 zł</span></label>
-            <label><input type="radio" name="size" value="M" data-price="169" data-label="Średni, Ø 18 cm" checked> Średni, Ø 18 cm <span>169 zł</span></label>
-            <label><input type="radio" name="size" value="L" data-price="219" data-label="Duży, Ø 22 cm"> Duży, Ø 22 cm <span>219 zł</span></label>
-          </fieldset>
-          <fieldset>
-            <legend>Pudełko</legend>
-            <label><input type="radio" name="box" value="kremowy" data-label="Kremowy welur" checked> Kremowy welur <span>w cenie</span></label>
-            <label><input type="radio" name="box" value="rozowy" data-label="Różowy welur"> Różowy welur <span>w cenie</span></label>
-          </fieldset>
-          <fieldset>
-            <legend>Dodatki</legend>
-            <label><input type="checkbox" name="extra" value="kokarda" data-price="12" data-label="Kokarda z juty i koronki" checked> Kokarda z juty i koronki <span>12 zł</span></label>
-            <label><input type="checkbox" name="extra" value="bilecik" data-price="8" data-label="Bilecik z życzeniami"> Bilecik z Twoimi życzeniami <span>8 zł</span></label>
-            <label><input type="checkbox" name="extra" value="kurier" data-price="19" data-label="Wysyłka kurierem"> Wysyłka kurierem <span>19 zł</span></label>
-          </fieldset>
-        </form>
-
-        <a class="button button-light" href="#zamow" data-order-receipt>Zamów ten zestaw</a>
-      </div>
-
-      <div class="receipt" data-reveal aria-live="polite">
-        <p class="receipt-name">Twój box</p>
-        <dl class="receipt-rows">
-          <div><dt>Box „<span data-r-name>Len i koronka</span>”</dt><dd></dd></div>
-          <div><dt data-r-size>Średni, Ø 18 cm</dt><dd data-r-size-p>169 zł</dd></div>
-          <div><dt data-r-box>Kremowy welur</dt><dd>0 zł</dd></div>
-          <div data-r-extra="kokarda"><dt>Kokarda z juty i koronki</dt><dd>12 zł</dd></div>
-          <div data-r-extra="bilecik" hidden><dt>Bilecik z życzeniami</dt><dd>8 zł</dd></div>
-          <div data-r-extra="kurier" hidden><dt>Wysyłka kurierem</dt><dd>19 zł</dd></div>
-        </dl>
-        <div class="receipt-total"><span>Razem</span><strong data-r-total>181 zł</strong></div>
-        <p class="receipt-note">Ręcznie układany, jedyny w swoim rodzaju.</p>
-      </div>
-    </section>
-
-    <!-- FAQ -->
+    <!-- PYTANIA -->
     <section class="faq" id="pytania" aria-labelledby="faq-h">
-      <h2 class="faq-h" id="faq-h" data-reveal>Częste pytania</h2>
+      <div class="faq-head" data-reveal>
+        <h2 id="faq-h">Pytania<em>.</em></h2>
+        <p>Nie ma tu Twojego pytania? Napisz do mnie przez OLX.</p>
+      </div>
       <div class="faq-list" data-reveal>
         <details name="faq" open>
+          <summary>Jak kupić box?</summary>
+          <p>Wszystkie boxy wystawiam na OLX. Tam je kupisz, zapłacisz i wybierzesz dostawę: przesyłkę OLX albo odbiór osobisty.</p>
+        </details>
+        <details name="faq">
           <summary>Czy kwiaty wyglądają jak prawdziwe?</summary>
           <p>Z odległości metra większość osób nie zauważa różnicy. Z bliska widać, że płatki są z tkaniny, ale mają naturalne przebarwienia i żyłki, więc box nie wygląda plastikowo.</p>
         </details>
         <details name="faq">
           <summary>Jak dbać o box?</summary>
-          <p>Nie podlewasz go i nie przycinasz. Raz na kilka tygodni zdmuchnij kurz suszarką na zimnym nawiewie albo miękkim pędzlem. Najlepiej czuje się z dala od ostrego słońca.</p>
+          <p>Nie podlewasz go i nie przycinasz. Raz na kilka tygodni zdmuchnij kurz suszarką na zimnym nawiewie albo miękkim pędzlem. Najlepiej stoi z dala od ostrego słońca.</p>
         </details>
         <details name="faq">
-          <summary>Czy mogę wybrać własne kolory?</summary>
-          <p>Tak, to najczęstsze zamówienie. Wyślij mi zdjęcie wnętrza, sukienki albo zaproszenia, a dobiorę kwiaty i wstążkę do tych odcieni.</p>
-        </details>
-        <details name="faq">
-          <summary>Ile czeka się na zamówienie?</summary>
-          <p>Zwykle 5–7 dni roboczych od akceptacji projektu. Przy większych zamówieniach ustalamy termin indywidualnie.</p>
-        </details>
-        <details name="faq">
-          <summary>Czy wysyłasz w całej Polsce?</summary>
-          <p>Tak, kurierem, w kartonie z przegródkami, żeby nic się nie zgniotło. Możesz też odebrać box osobiście po wcześniejszym umówieniu.</p>
-        </details>
-        <details name="faq">
-          <summary>Czy robisz zamówienia na śluby i komunie?</summary>
-          <p>Tak. Boxy sprawdzają się jako dekoracja stołów i podziękowania dla rodziców czy świadków. Napisz, ile sztuk potrzebujesz i na kiedy.</p>
+          <summary>Czy mogę zamówić box w swoich kolorach?</summary>
+          <p>Tak. Napisz wiadomość na OLX, wyślij zdjęcie wnętrza, sukienki albo zaproszenia, a dobiorę kwiaty i wstążkę do tych odcieni.</p>
         </details>
         <details name="faq">
           <summary>Czy box nadaje się na prezent?</summary>
-          <p>Po to powstał. Mogę dołączyć bilecik z Twoimi życzeniami i wysłać box prosto do obdarowanej osoby.</p>
-        </details>
-        <details name="faq">
-          <summary>Jak mogę zapłacić?</summary>
-          <p>Przelewem lub BLIKIEM po akceptacji projektu, a przy odbiorze osobistym także gotówką.</p>
+          <p>Po to powstał. Przychodzi gotowy do wręczenia, w pudełku z uchwytem ze wstążki.</p>
         </details>
       </div>
     </section>
 
-    <!-- KONTAKT: kupon do wycięcia -->
-    <section class="contact" id="zamow" aria-labelledby="coupon-h">
-      <form class="coupon" id="coupon" action="mailto:kontakt@emiliaboxy.pl" method="post" enctype="text/plain" data-reveal>
-        <div class="coupon-left">
-          <h2 id="coupon-h">Zamów swój box</h2>
-          <p>Wypełnij kupon. Odpiszę w ciągu doby z propozycją kwiatów i ceną.</p>
+    <!-- OLX -->
+    <section class="cta" aria-labelledby="cta-h">
+      <div class="cta-card" data-reveal>
+        <img class="cta-bg" src="assets/deco/bg-cta.webp" width="1800" height="900" loading="lazy" alt="" aria-hidden="true">
+        <img class="deco deco-cta-l" src="assets/deco/f-leaves.webp" width="292" height="282" alt="" aria-hidden="true">
+        <img class="deco deco-cta-r" src="assets/deco/f-rose.webp" width="235" height="220" alt="" aria-hidden="true">
+        <div class="cta-inner">
+          <h2 id="cta-h">Znajdziesz mnie <em>na OLX.</em></h2>
+          <p>Aktualne boxy, zdjęcia z każdej strony i wiadomości do mnie. Zakup i wysyłka bezpiecznie przez OLX.</p>
+          <a class="pill pill-light pill-lg" href="https://www.olx.pl/" data-olx target="_blank" rel="noopener">Przejdź do OLX <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="coupon-right">
-          <label class="sr" for="f-name">Imię</label>
-          <input id="f-name" name="imie" type="text" placeholder="Imię" autocomplete="given-name" required>
-          <label class="sr" for="f-contact">E-mail lub telefon</label>
-          <input id="f-contact" name="kontakt" type="text" placeholder="E-mail lub telefon" autocomplete="email" required>
-          <label class="sr" for="f-box">Który box i jakie kolory</label>
-          <input id="f-box" name="box" type="text" placeholder="Który box i jakie kolory">
-          <label class="sr" for="f-when">Okazja i termin</label>
-          <input id="f-when" name="termin" type="text" placeholder="Okazja i termin">
-          <button class="coupon-submit" type="submit">Wyślij zamówienie</button>
-        </div>
-      </form>
+      </div>
     </section>
   </main>
 
-  <!-- STOPKA z kafli -->
   <footer class="footer">
-    <div class="ft ft-statement">
-      <p>Kwiaty, które zostają na dłużej niż jeden weekend.</p>
-      <p class="legal">© 2026 Emilia · Kwiatowe boxy</p>
+    <div class="footer-water" aria-hidden="true">KWIATBOXY</div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="#top">
+          <img class="brand-mark" src="assets/logo.svg" width="48" height="48" alt="">
+          <span class="brand-word">Kwiatboxy<span class="dot">.</span></span>
+        </a>
+        <p class="footer-tag"><em>kwiaty, które nie więdną</em></p>
+        <p>Dekoracyjne boxy ze sztucznych kwiatów, ręcznie układane przez Emilię.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Boxy</h3>
+        <a href="#boxy">Kolekcja</a>
+        <a href="#boxy">Na zamówienie</a>
+        <a href="#galeria">Galeria</a>
+      </div>
+      <div class="footer-col">
+        <h3>Strona</h3>
+        <a href="#jak-powstaja">Jak powstają</a>
+        <a href="#o-mnie">O mnie</a>
+        <a href="#pytania">Pytania</a>
+      </div>
+      <div class="footer-col">
+        <h3>Kontakt</h3>
+        <a href="https://www.olx.pl/" data-olx target="_blank" rel="noopener">Profil na OLX ↗</a>
+        <a href="https://www.olx.pl/" data-olx target="_blank" rel="noopener">Wiadomość przez OLX ↗</a>
+      </div>
     </div>
-    <nav class="ft ft-nav" aria-label="Stopka">
-      <a href="#kolekcja">Kolekcja</a>
-      <a href="#o-mnie">O mnie</a>
-      <a href="#jak-powstaje">Jak powstaje</a>
-      <a href="#cennik">Cennik</a>
-      <a href="#pytania">Pytania</a>
-    </nav>
-    <div class="ft ft-place">
-      <p>Wysyłka w całej Polsce, odbiór osobisty po umówieniu.</p>
+    <div class="footer-bottom">
+      <span>© 2026 Kwiatboxy · Emilia</span>
+      <a href="#top">Do góry ↑</a>
     </div>
-    <div class="ft ft-mail">
-      <a href="mailto:kontakt@emiliaboxy.pl">kontakt@emiliaboxy.pl</a>
-    </div>
-    <div class="ft ft-word" aria-hidden="true"><span>Emilia</span></div>
-    <a class="ft ft-cta" href="#zamow">
-      <span>Zamów swój box</span>
-      <svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M10 38 L38 10 M16 10 H38 V32" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg>
-    </a>
   </footer>
 
   <script src="main.js" defer></script>

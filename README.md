@@ -1,23 +1,36 @@
-# Emilia — kwiatowe boxy
+# Kwiatboxy — kwiaty, które nie więdną
 
-Statyczna strona (HTML + CSS + JS, bez budowania) promująca ręcznie układane boxy ze sztucznych kwiatów.
+Statyczna strona (HTML + CSS + JS, bez budowania) promująca ręcznie układane boxy ze sztucznych kwiatów Emilii.
+Wszystkie przyciski zakupu prowadzą do OLX.
 
 ## Uruchomienie
 
-Otwórz `index.html` w przeglądarce albo wrzuć repozytorium na Vercel / Netlify / GitHub Pages — nie wymaga żadnej konfiguracji.
+Otwórz `index.html` w przeglądarce albo wrzuć repozytorium na Vercel / Netlify / GitHub Pages — bez konfiguracji.
+
+## Link do OLX
+
+W pliku `main.js` na samej górze:
+
+```js
+const OLX_URL = 'https://www.olx.pl/';
+```
+
+Wklej tam adres profilu Emilii na OLX — wszystkie przyciski „OLX” go użyją.
+Jeśli konkretny box ma prowadzić do swojego ogłoszenia, dodaj w `index.html` przy tym boxie
+`data-olx="https://www.olx.pl/d/oferta/..."`.
 
 ## Struktura
 
 - `index.html` — treść strony
-- `styles.css` — wygląd (kolory i rozmiary pisma jako zmienne w `:root`)
-- `main.js` — wybór boxa w hero, paragon w cenniku, kupon → e-mail, animacje wejścia
-- `assets/img/` — zdjęcia (kadry z Twoich zdjęć). Aby podmienić zdjęcie, wgraj plik o tej samej nazwie.
+- `styles.css` — wygląd (kolory i fonty jako zmienne w `:root`)
+- `main.js` — link do OLX, menu, paralaksa dekoracji, animacje wejścia
+- `assets/logo.svg` — logo (box z kwiatem), też jako favicon
+- `assets/img/` — zdjęcia boxów (kadry ze zdjęć Emilii)
+- `assets/deco/` — kwiaty wycięte z tła ze zdjęć Emilii (hero, narożniki, kwiatki przy nagłówkach)
+  i wygenerowane z nich tło bokeh (`bg-cta.webp`)
 
 ## Do uzupełnienia przed publikacją
 
-- Adres e-mail `kontakt@emiliaboxy.pl` (w `index.html`, 3 miejsca) — przykładowy.
-- Ceny (129 / 169 / 219 zł, dodatki 12 / 8 / 19 zł), średnice pudełek i czas realizacji — przykładowe.
-- Nazwy boxów (Len i koronka, Pudrowy róż, Wrzos, Brzoskwinia, Oliwka) i ich opisy — nadane roboczo; w `index.html` i `main.js`.
-- List od Emilii (sekcja „O mnie”) — napisany przykładowo, warto przepisać własnymi słowami.
-- Okrągły portret w liście to zbliżenie róży — można podmienić na zdjęcie Emilii (`assets/img/d-roza.jpg` jest też używane w zdaniu wprowadzającym, więc lepiej dodać nowy plik).
-- Linki do Instagrama / Facebooka — brak, do dodania w stopce.
+- Adres OLX (patrz wyżej).
+- Nazwy boxów (Len i koronka, Pudrowy róż, Wrzos, Brzoskwinia, Oliwka) i ich opisy — robocze.
+- Tekst „O mnie” i odpowiedzi w pytaniach — napisane przykładowo, warto przepisać własnymi słowami.
